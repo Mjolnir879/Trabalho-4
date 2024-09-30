@@ -53,13 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 });
 
+
+var total = 0;
+var correct  = 0;
 function verifica() {
-    var total = 0;
+   
     const size = document.getElementById('result');
     size.style.width = '150px';
     size.style.height = '150px';
     if (document.getElementById("q1b") && document.getElementById("q1b").checked) {
         total += 1;
+        correct += 1;
     }
     if (document.getElementById("q2a") && document.getElementById("q2a").checked) {
         total += 1;
@@ -126,58 +130,40 @@ function changeBack(){
     const BImage = document.getElementById("backI");
     const vidContainer = document.querySelector(".vid");
     if (check == 1) {
-        // Remove any existing video
+        
         while (vidContainer.firstChild) {
             vidContainer.removeChild(vidContainer.firstChild);
         }
-
         main.style.background = "none";
-
-        // Cria o elemento de vídeo
         const video = document.createElement('video');
         video.id = 'bg-video';
         video.autoplay = true;
         video.muted = true;
         video.loop = true;
-
-        // Cria o elemento source e define o caminho do vídeo
         const source = document.createElement('source');
         source.src = 'Images/4k.mp4';
         source.type = 'video/mp4';
-
-        // Adiciona o source ao vídeo
         video.appendChild(source);
-
-        // Adiciona o vídeo ao contêiner de vídeo
         vidContainer.appendChild(video);
-
-        // Aplica estilos ao vídeo
         video.style.position = 'absolute';
         video.style.top = '50%';
         video.style.left = '50%';
-        video.style.width = '98%';
-        video.style.height = '125%';
+        video.style.width = '100%';
+        video.style.height = '100%';
         video.style.objectFit = 'cover';
         video.style.transform = 'translate(-50%, -50%)';
-        video.style.zIndex = '-1'; // Coloca o vídeo atrás do conteúdo
-
-        // Remove a imagem de fundo
+        video.style.zIndex = '-1';
         main.style.backgroundImage = "none";
         BImage.style.backgroundImage = "none";
-        video.style.borderRadius = "20px"
-
+        video.style.borderRadius = "20px";
         check = 0;
     } else {
-        // Remove o vídeo
         while (vidContainer.firstChild) {
             vidContainer.removeChild(vidContainer.firstChild);
         }
-
-        // Restaura a imagem de fundo
         main.style.backgroundImage = "none";
         main.style.backgroundColor = "black";
         BImage.style.backgroundImage = "url(Images/gtr_eyes.jpg)";
-
         check = 1;
     }
     
