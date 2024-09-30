@@ -48,6 +48,7 @@ body{
     background-image: url(Images/gtr_eyes.jpg);
     background-size:fit-content 300px;
     background-position-y: 50px;
+    background-position-x: -80px;
     transition: background-clip 0.5s, -webkit-background-clip 0.5s, -webkit-text-fill-color 0.5s, background-image 0.5s, background-size 0.5s, background-position-y 0.5s, text-shadow 1.5s ease-in-out;
 }
 
