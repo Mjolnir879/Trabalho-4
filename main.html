@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="mainScript.js"> </script>
+    <link rel="stylesheet" href="mainStyle.css">
+</head>
+<body>
+
+    <!-- Página Inicial -->
+
+    <div class="main" id="main0">
+       
+        <h1 id="backI" onclick="changeBack()">GearHead's-Quest</h1>
+        <button type="button" id="next" onclick="page00()">Avançar</button>
+        <div class="vid" style="width:100%; height:100%;"></div>
+        
+        
+    </div>
+
+    <!-------------------------------------------------------------------------------------------------------------->
+
+    <!-- Painel de Resultados-->
+
+    <div class="result" id="result">
+        <button type="menu" id="x" onclick="closeresult()">x</button>
+        <p>Pontos no Total: 2. Resultado:</p>
+        <div id='resultado'></div>
+    </div>
+
+    <!--------------------------------------------------------------------------------------------------------------->
+
+    <!-- Página 01-->
+
+    <div class="main" id="main1">
+        <div class="topbar">
+           <h3> Questionário</h3>
+            <button type="button" id="buttonB" onclick="page01back()"><img src="Images/placaE.png" width="70px" height="100px"></button>
+            <button type='button' id="buttonV" onclick="verifica()"><img src="Images/show.png" width="70px" height="80px"></button>
+            <button type="button" id="buttonN" onclick="page01next()"><img src="Images/placaD.png" width="70px" height="100px"></button>
+        </div>
+        
+        <div class="question" id="question1">
+            <form>
+                <ul class="alternative" id="alternative1"> <p class="title"> 1 - Qual imagem apresenta um touro mecânico? </p><br><br>
+                    <li>
+                        <input type="radio" id='q1a' name="q1"> (A) Imagem 1 
+                    </li><br>
+                    <li>
+                        <input type="radio" id='q1b' name="q1"> (B) Imagem 2
+                    </li><br>
+                </ul>
+            </form>
+            <div class="imgD" id="imgD1"><img id="img1" src="Images/tmc.jpg" width="200px" height="200px"><h5>Imagem 1</h5></div>
+            <div class="imgD" id="imgD2"><img id="img2" src="Images/mct.png" width="200px" height="200px"><h5>Imagem 2</h5></div>
+        </div>
+        <div class="question" id="question2">
+            <form>
+                <ul class="alternative" id="alternative2">
+                    <p class="title"> 2 - Ainda sobre as imagens, o que é o touro mecânico?</p> <br>
+                    <li>
+                        <input type="radio" id='q2a' name="q2">(A) Mêcanico da Família Confiável
+                    </li><br>
+                    <li>
+                        <input type="radio" id='q2b' name="q2">(B) Brinquedo eletrônico para todas idades muito presente em festas   
+                    </li><br>
+                    <li>
+                        <input type="radio" id='q2c' name="q2">(C) Um Dragster
+                    </li><br>
+                    <li>
+                        <input type="radio" id='q2d' name="q2">(D) Um Minotauro Ciborgue
+                        
+                    </li><br><br>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!------------------------------------------------- Página 02 ----------------------------------------------------->
+
+    <div class="main" id="main2">
+        <div class="topbar">
+            <h3> Questionário</h3>
+             <button type="button" id="buttonB" onclick="page02back()"><img src="Images/placaE.png" width="70px" height="100px"></button>
+             <button type='button' id="buttonV" onclick="verifica()"><img src="Images/show.png" width="70px" height="80px"></button>
+             <button type="button" id="buttonN" onclick="page02next()"><img src="Images/placaD.png" width="70px" height="100px"></button>
+         </div>
+        
+        <div class="question" id="question3">
+            <form>
+                <ul class="alternative" id="alternative3"> <p class="title"> 1 - Qual imagem apresenta um touro mecânico? </p><br><br>
+                    <li>
+                        <input type="radio" id='q3a' name="q3"> (A) Imagem 1 
+                    </li><br>
+                    <li>
+                        <input type="radio" id='q3b' name="q3"> (B) Imagem 2
+                    </li><br>
+                </ul>
+            </form>
+            <!--  <div class="imgD" id="imgD1"><img id="img1" src="Images/tmc.jpg" width="200px" height="200px"><h5>Imagem 1</h5></div>
+            <div class="imgD" id="imgD2"><img id="img2" src="Images/mct.png" width="200px" height="200px"><h5>Imagem 2</h5></div>  -->
+        </div>
+        <div class="question" id="question4">
+            <form>
+                <ul class="alternative" id="alternative4">
+                    <p class="title"> 2 - Ainda sobre as imagens, qual o papel desempenhado pelo verdadeiro touro mecânico?</p> <br>
+                    <li>
+                        <input type="radio" id='q4a' name="d4">(A) Mêcanico da Família Confiável
+                    </li><br>
+                    <li>
+                        <input type="radio" id='q4b' name="d4">(B) Brinquedo eletrônico para todas idades muito presente em festas   
+                    </li><br>
+                    <li>
+                        <input type="radio" id='q4c' name="d4">(C) Um Dragster
+                    </li><br>
+                    <li>
+                        <input type="radio" id='q4d' name="d4">(D) Um Minotauro Ciborgue
+                        
+                    </li><br><br>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Rádio ao Clicar no LI</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <input type="radio" name="option" id="option1">
+            <label for="option1">Opção 1</label>
+        </li>
+        <li>
+            <input type="radio" name="option" id="option2">
+            <label for="option2">Opção 2</label>
+        </li>
+        <li>
+            <input type="radio" name="option" id="option3">
+            <label for="option3">Opção 3</label>
+        </li>
+    </ul>
+
+    <script>
+        document.querySelectorAll('li').forEach(item => {
+            item.addEventListener('click', event => {
+                const radio = item.querySelector('input[type="radio"]');
+                if (radio) {
+                    radio.checked = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
